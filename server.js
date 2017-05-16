@@ -22,9 +22,6 @@ let dbURI = 'mongodb://' + process.env.DB_USER + ':' + process.env.DB_PASSWORD +
 // change database uri if testing
 if (config.util.getEnv('NODE_ENV') == 'test') {
     dbURI = 'mongodb://localhost:27017/baseauthtest';
-} else {
-    // use morgan logger
-    app.use(morgan('combined'));
 }
 
 // connect to the database
@@ -40,6 +37,11 @@ const port = process.env.PORT;
 
 // user route
 const users = require('./routes/users');
+
+// use morgan logger except during testing
+if (config.util.getEnv('NODE_ENV') !== 'test') {
+    app.use(morgan('combined'));
+}
 
 // cors middleware
 app.use(cors());
