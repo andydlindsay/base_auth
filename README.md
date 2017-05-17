@@ -34,17 +34,17 @@ $ heroku create <name-of-app>
 $ heroku git:remote -a <name-of-app>
 $ git push heroku master
 ```
-The first line creates a named Heroku app. The other two lines create a remote and push the master branch to it. The app will automatically build and deploy on Heroku. [More info.](https://devcenter.heroku.com/articles/git#deploying-code)  
-Vist your Heroku [dashboard](https://dashboard.heroku.com/apps) and, under the Settings tab, set the config variables ```DB_PASSWORD``` and ```DB_USER``` to the values in the .env file. [More info.](https://devcenter.heroku.com/articles/config-vars)
+The first line creates a named Heroku app. The other two lines create a remote and push the master branch to it. The app will automatically build and deploy on Heroku ([more info](https://devcenter.heroku.com/articles/git#deploying-code)).  
+Vist your Heroku [dashboard](https://dashboard.heroku.com/apps) and, under the Settings tab, set the config variables ```DB_PASSWORD``` and ```DB_USER``` to the values in the .env file ([more info](https://devcenter.heroku.com/articles/config-vars)).
 
 ### Demo
 A demo of this app is running on [Heroku](http://andydlindsay-baseauth.herokuapp.com).
 
 ### More information on the technologies used to build this app
-[MongoDB](https://docs.mongodb.com/manual/),  
+[MongoDB](https://docs.mongodb.com/manual/), 
 [Mongoose](http://mongoosejs.com/docs/guide.html), 
-[Node](https://nodejs.org/en/docs/), and 
-[Express](https://expressjs.com/en/guide/routing.html), 
+[Node](https://nodejs.org/en/docs/), 
+[Express](https://expressjs.com/en/guide/routing.html), and 
 [Passport](http://passportjs.org).  
 [Gulp](https://github.com/gulpjs/gulp/blob/master/docs/API.md), 
 [Chai](http://chaijs.com/guide/), and 
