@@ -33,7 +33,7 @@ mongoose.connection.on('error', (err) => {
 });
 
 // port number
-const port = process.env.PORT;
+const port = process.env.PORT || 8080;
 
 // user route
 const users = require('./routes/users');
