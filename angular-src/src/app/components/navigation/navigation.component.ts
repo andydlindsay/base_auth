@@ -10,7 +10,7 @@ import { Router } from '@angular/router';
 })
 export class NavigationComponent implements OnInit {
 
-  title: String = 'Doo Drops';
+  title: String = 'Base Auth';
   subtitle: String = 'Subtitle';
   username: String;
 
