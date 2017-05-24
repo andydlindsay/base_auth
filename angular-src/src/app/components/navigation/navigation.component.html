@@ -4,6 +4,9 @@
   <div *ngIf="!isLoggedIn()">
     <a routerLink="/register">Register</a><span>&nbsp;&nbsp;</span><a routerLink="/login">Login</a>
   </div>
+  <div *ngIf="isLoggedIn()">
+    <button md-button (click)="onLogoutClick()">Logout</button>
+  </div>
 </md-toolbar>
 <md-sidenav-container id="app-background">
   <md-sidenav #start mode="side">

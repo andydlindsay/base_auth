@@ -9,6 +9,7 @@ body {
 
 md-card-content {
     margin: auto;
+    padding: 16px;
 }
 
 form {

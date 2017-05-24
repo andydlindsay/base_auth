@@ -10,7 +10,7 @@ const chai = require('chai'),
       server = require('../server'),
       User = require('../models/user'),
       assert = require('assert'),
-      url = 'localhost:' + process.env.PORT + '/';
+      url = 'localhost:8080/';
 
 let newUser;
 let jwtToken;
