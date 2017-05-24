@@ -1,7 +1,11 @@
 <md-card>
   <md-toolbar>Login</md-toolbar>
   <md-card-content>
+    <div id="alternate-signup">
+      <button md-raised-button color="accent"><i class="fa fa-twitter fa-3x" aria-hidden="true"></i> Connect with Twitter</button>
+    </div>
     <form [formGroup]="loginForm">
+      <h2>Or login with your username</h2>
       <md-input-container>
         <input type="text" required mdInput placeholder="Username" formControlName="username" id="username">
         <md-hint *ngIf="formErrors.username">{{ formErrors.username }}</md-hint>

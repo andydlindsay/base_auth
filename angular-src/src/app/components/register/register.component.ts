@@ -109,6 +109,19 @@ export class RegisterComponent implements OnInit {
     }
   }
 
+  onTwitterClick() {
+    console.log('Clicked!');
+    this.auth.twitterLogin().subscribe(
+      data => {
+        console.log(data);
+      },
+      err => {
+        console.log(err);
+        return false;
+      }
+    );
+  }
+
   onRegisterSubmit() {
     if (this.registerForm.valid) {
       // create a user object to hold form values

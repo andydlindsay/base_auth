@@ -40,7 +40,7 @@ The third line creates a named Heroku app. The last two lines create a remote an
 Vist your Heroku [dashboard](https://dashboard.heroku.com/apps) and, under the Settings tab, set the config variables ```DB_PASSWORD``` and ```DB_USER``` to the values in the .env file ([more info](https://devcenter.heroku.com/articles/config-vars)).
 
 ### Demo
-A demo of this app is running on [Heroku](http://andydlindsay-baseauth.herokuapp.com).
+A demo of this app is running on [Heroku](https://andydlindsay-baseauth.herokuapp.com).
 
 ### More information on the technologies used to build this app
 [MongoDB](https://docs.mongodb.com/manual/), 

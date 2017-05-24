@@ -82,5 +82,17 @@ router.get('/profile', passport.authenticate('jwt', {session: false}), (req, res
     });
 });
 
+// twitter routes
+router.get('/auth/twitter', passport.authenticate('twitter'), (req, res) => {
+    res.json({ 'msg': 'So weird' });
+});
+
+router.get('/auth/twitter/callback', passport.authenticate('twitter', {
+    successRedirect: '/profile',
+    failureRedirect: '/'
+}), (req, res) => {
+    res.json({ 'msg': 'So weird' });
+});
+
 // export router
 module.exports = router;

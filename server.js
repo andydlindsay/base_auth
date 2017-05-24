@@ -5,7 +5,9 @@ const express = require('express'),
       path = require('path'),
       mongoose = require('mongoose'),
       passport = require('passport'),
-      bodyParser = require('body-parser');
+      bodyParser = require('body-parser'),
+      cookieParser = require('cookie-parser'),
+      session = require('express-session');
 
 // require dotenv to populate environment variables
 require('dotenv').config();
@@ -52,7 +54,11 @@ app.use(express.static(path.join(__dirname, 'client')));
 // body parser
 app.use(bodyParser.json());
 
+// cookie parser
+app.use(cookieParser);
+
 // passport middleware
+app.use(session({ secret: 'thebestsecretevah', resave: true, saveUninitialized: true }));
 app.use(passport.initialize());
 app.use(passport.session());
 

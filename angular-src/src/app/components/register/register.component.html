@@ -1,7 +1,11 @@
 <md-card>
   <md-toolbar>Register</md-toolbar>
   <md-card-content>
+    <div id="alternate-signup">
+      <button type="button" md-raised-button color="accent" (click)="onTwitterClick()"><i class="fa fa-twitter fa-3x" aria-hidden="true"></i> Connect with Twitter</button>
+    </div>
     <form [formGroup]="registerForm">
+      <h2>Or register with your email address</h2>
       <md-input-container>
         <input type="text" required mdInput placeholder="Name" formControlName="name" id="name" dividerColor="accent">
         <md-hint *ngIf="formErrors.name">{{ formErrors.name }}</md-hint>
@@ -18,7 +22,7 @@
         <input required mdInput type="password" placeholder="Password" formControlName="password" id="password" dividerColor="accent">
         <md-hint *ngIf="formErrors.password">{{ formErrors.password }}</md-hint>
       </md-input-container>
-      <button md-raised-button color="primary" (click)="onRegisterSubmit()">Register</button>
+      <button md-raised-button color="primary" (click)="onRegisterSubmit()">Register</button>      
     </form>
   </md-card-content>
 </md-card>

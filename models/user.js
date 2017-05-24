@@ -27,6 +27,23 @@ const userSchema = mongoose.Schema({
         type: String,
         minlength: [8, 'password must be at least 8 characters long'],
         required: [true, 'password is a required field']
+    },
+    twitter: {
+        id: {
+            type: String
+        },
+        token: {
+            type: String
+        },
+        displayName: {
+            type: String
+        },
+        username: {
+            type: String
+        },
+        image: {
+            type: String
+        }
     }
 });
 
